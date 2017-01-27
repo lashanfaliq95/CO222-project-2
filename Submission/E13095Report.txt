@@ -1,0 +1,39 @@
+1)Array implication
+    Testing Queue
+    -Elapsed time 11682.273000
+
+    Testing Stack
+    -Elapsed time 2.016000
+                  We have to allocate memory for a upperlimit in a array which may not always be reached
+So this is inefficent in terms of creating .When you need to remove a element you can't just free it's space
+in a array you only can free the whole thing.
+                   If you consider the times for the queue and stack the reason the queue takes so long comparative to
+the stack is when we input a element in queue we shift all the elemnts by a count so that the value we put first will always
+be in the last position of the array.And since the array is just sequential addresses is easy to input its elements so
+it doesn't take much time.
+initial size of stack in array inplication=4 Bytes + 4 Bytes +4*100000 Bytes=400008 Bytes.
+initial size of queue in array implication=400008 Bytes.
+2)Linklist implication
+     Testing Queue
+-Elapsed time 12.010000
+
+
+      Testing Stack
+-Elapsed time 12.023000
+
+                   Linked list unlike arrays can dynamicaly allocate memory for each node which is much more efficent
+memory wise.But we need to allocate extra space for the pointer in each node compared to arrays.
+If you need to remove a element you can just free the node in linked list.
+                  The stack and queue usually takes similar times because mostly the same way has been used for both.The only
+difference in stack is the first node will remain at the end of the list(at the end because the list starts from the 
+final element i add) and in queue it will remain at the begining(Here i made the the initial node the first node and pointed
+to other nodes from here on).
+                  The reason it takes more time compared to arrays is as i meantioned above arrays use addresses next to each
+other but here the addresses may be from random places so when u have to delete,add etc you have to keep moving around the heap.
+initial size of queue in linked list=size of a node variable+two node pointers
+                                    =(4 Bytes + 4 Bytes)+2*4Bytes// i have a 32 bit OS
+                                    =16 Bytes.
+initial size of stack in linked list=size of a node variable+one node pointer
+                                    =8 Bytes+4Bytes
+                                    =12 Bytes.
+With each node you add the memory will be allocated unlike in array in which the memory is allocated from the begining.
